@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+
+@Injectable({providedIn: 'root'})
+
+export class CandidateService {
+
+  public static url: string = 'http://divulga.tse.jus.br/2018/divulgacao/oficial/295/dadosdivweb/br/br-c0001-e000295-w.js'
+
+  constructor(public http: Http) { }
+
+  get(){
+    return this.http.get(CandidateService.url).toPromise().then((res) => res.json());
+  }
+
+  
+}
