@@ -1,0 +1,24 @@
+
+header {
+  background: url('/src/assets/bg-header.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 420px;
+  // colors style
+  h1,h2,p{
+    color: #fff;
+    text-align: center;
+  }
+  // font-sizes
+  h1{
+    font-size: 48px;
+  }
+  h2{
+    font-size: 38px;
+  }
+  p{
+    font-size: 18px;
+  }
+}
