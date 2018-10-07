@@ -159,13 +159,6 @@ section{
   }
 
   header {
-    background: url('/src/assets/bg-header.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 420px;
-    background-position: 0px -150px;
     &.nav-title{
       padding: 110px 0 0 0;
     }
