@@ -11,6 +11,8 @@ export class CandidateService {
 
   get(){
     return this.http.get(CandidateService.url).toPromise().then((res) => res.json());
+    // uncomment for local and moc data
+    // return this.http.get('../../assets/data.json').toPromise().then((res) => res.json());
   }
 
   
