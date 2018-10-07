@@ -1,5 +1,6 @@
 @import '../styles.scss';
 
+
 header {
   background: url('/src/assets/bg-header.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -36,6 +37,19 @@ section{
       >.mat-card{
         padding: 40px !important;
       }
+      .mat-card{
+        h1{
+          font-size: 48px;
+          text-align: left;
+          &.highlight{
+          font-weight: 500;
+          }
+          span{
+            float: right;
+          }
+        }
+
+      }
     }
   }
 }
@@ -47,27 +61,28 @@ section{
     .container{
       .mat-card{
         padding: 15px;
-        color: $font-white;
         h1{
           font-size: 28px;
           text-align: right;
+          color: $font-white;
         }
         p{
+          color: $font-white;
           font-size: 15px;
           text-align: center;
         }
         
         .total-votes{
-          background-color: $bg-total;          
+          background-color: $bg-counted;          
+        }
+        .pending-votes{
+          background-color: $bg-pending;
         }
         .valid-votes{
           background-color: $bg-valid;
         }
         .invalid-votes{
           background-color: $bg-invalid;
-        }
-        .canceled-votes{
-          background-color: $bg-canceled;
         }
       }
     }
@@ -83,14 +98,112 @@ section{
           padding: 10px;
           margin: 20px 0;
           border: 1px solid #f1f1f1;
+          h1{
+            font-size: 18px;
+            &.highlight{
+              font-weight: 500px;
+            }
+          }
+          p{
+            font-size: 15px;
+          }
+          .text-overflow{
+            display: inline-block;
+            width: 107px;
+            white-space: nowrap;
+            overflow: hidden !important;
+            text-overflow: ellipsis;
+          }
+          .candidate-img{
+            img{
+              width: 100px;
+              border-radius: 50%;
+            }
+          }
+          .votes-candidate{
+            font-size: 28px;
+          }
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 620px) {
+
+
+@media only screen and (max-width: 991px) {
   section{
-    margin: 25px;
+    &.candidates{
+      .container{
+        .mat-card{
+          .candidate-info{
+            padding: 25px;
+            h1{
+              font-size: 15px;
+              &.highlight{
+                font-weight: 500px;
+              }
+            }
+            p{
+              font-size: 13px;
+            }
+            .candidate-img{
+              img{
+                width: 90px;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    background: url('/src/assets/bg-header.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 420px;
+    background-position: 0px -150px;
+    &.nav-title{
+      padding: 110px 0 0 0;
+    }
+    // colors style
+    h1,h2,p{
+      color: #fff;
+      text-align: center;
+    }
+    // font-sizes
+    h1{
+      font-size: 35px;
+    }
+    h2{
+      font-size: 25px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+
+
+  
+  section{
+    &.overview{
+      margin-top: -70px;
+      .container{
+        .mat-card{
+          margin-bottom: 12px;
+          .fix-card-margin{
+            margin-bottom: 5px;
+          }
+          h1{
+            text-align: center !important;
+          }
+        }
+      }
+    }
   }
 }
+

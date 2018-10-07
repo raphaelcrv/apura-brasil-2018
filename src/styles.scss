@@ -5,10 +5,10 @@
 $bg-body: #F1F1F1; 
 
 // card overview
-$bg-total: #1ABC9C;
-$bg-valid: #3498DB;
-$bg-invalid: #34495E;
-$bg-canceled: #E74C3C;
+$bg-counted: #1ABC9C; //contabilizados
+$bg-pending: #656565; //pendentes
+$bg-valid: #3498DB;   //validos
+$bg-invalid: #E74C3C;//invalidos
 
 // font Color
 $font-default: #414141;
@@ -19,9 +19,25 @@ html, body { height: 100%; background: $bg-body }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
 
 h1,h2,h3,p{
+  color: $font-default;
   margin: 0px;
   font-weight: normal;
   &.highlight{
     font-weight: 500;
   }
+}
+
+h1{
+  &.text-right{
+    text-align: right!important;
+  }
+}
+
+
+::ng-deep .mat-progress-bar-fill::after {
+    background-color: $bg-counted;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: #E4E8EB;
 }

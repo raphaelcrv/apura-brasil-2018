@@ -7,6 +7,10 @@ import { MatCardModule } from '@angular/material/card';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +22,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatGridListModule,
     HttpModule,
     RouterModule,
-    MatCardModule
-    
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

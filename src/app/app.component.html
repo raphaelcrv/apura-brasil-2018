@@ -14,10 +14,24 @@
           <mat-card class='total-votes'>
             <div class="row">
               <div class='col-sm-6 col-xm-6'>
-                <p>Total<br>Apurado</p>
+                <p>Votos<br>contabilizados</p>
               </div>
               <div class='col-sm-6 col-xm-6'>
-                <h1 class="highlight">20%</h1>
+                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
+                <h1 *ngIf="!loading" class="highlight">{{overviewPercent.totalCounted}}%</h1>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <mat-card class="pending-votes">
+            <div class="row">
+              <div class='col-sm-6 col-xm-6'>
+                <p>Votos<br>Restantes</p>
+              </div>
+              <div class='col-sm-6 col-xm-6'>
+                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
+                <h1 *ngIf="!loading" class="highlight">{{overviewPercent.totalPending}}%</h1>
               </div>
             </div>
           </mat-card>
@@ -26,10 +40,11 @@
           <mat-card class="valid-votes">
             <div class="row">
               <div class='col-sm-6 col-xm-6'>
-                <p>Votos<br>Válidos</p>
+                <p>Votos<br>Validos</p>
               </div>
               <div class='col-sm-6 col-xm-6'>
-                <h1 class="highlight">20%</h1>
+                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
+                <h1 *ngIf="!loading" class="highlight">{{overviewPercent.totalValid}}%</h1>
               </div>
             </div>
           </mat-card>
@@ -41,19 +56,8 @@
                 <p>Votos<br>Invalidos</p>
               </div>
               <div class='col-sm-6 col-xm-6'>
-                <h1 class="highlight">20%</h1>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <mat-card class="canceled-votes">
-            <div class="row">
-              <div class='col-sm-6 col-xm-6'>
-                <p>Votos<br>Abstenido</p>
-              </div>
-              <div class='col-sm-6 col-xm-6'>
-                <h1 class="highlight">20%</h1>
+                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
+                <h1 *ngIf="!loading" class="highlight">{{overviewPercent.totalCanceled}}%</h1>
               </div>
             </div>
           </mat-card>
@@ -66,14 +70,45 @@
 <section class="candidates">
   <div class="container">
     <mat-card>
-      <h1>Presidente</h1>
-      <p>Sessões apuradas</p>
+      <button mat-stroked-button color="primary" (click)='getCandidates()'>Atualizar</button>
+      <span *ngIf="loading"><br>Atualizando...</span>
+      <h1 class="highlight">
+        Presidente
+        <span *ngIf="!loading">{{overviewPercent.totalCounted}}%</span>
+          <span *ngIf="loading">
+           <mat-spinner [diameter]=20 *ngIf="loading"></mat-spinner>
+          </span>
+      </h1>
+      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+      <mat-progress-bar *ngIf="!loading" mode="determinate" value="{{overviewPercent.totalCounted}}"></mat-progress-bar>
+      <p>Votos contabilizados: 
+          <!-- loading -->
+        <mat-spinner [diameter]=20  *ngIf="loading"></mat-spinner>
+        <!-- votesCounted -->
+        <span *ngIf="!loading">
+          {{overview.ea | number}}
+        </span> 
+      </p>
       <!-- candidates table -->
       <div class='candidate-info' *ngFor="let candidate of candidates">
-        <div class='candidate-img'>img</div>
-        <p>{{candidate.nm}}</p>
-        <p>Partido</p>
-        <p>Numero</p>
+        <div class="row">
+          <div class="col-md-2 col-sm-4">
+            <div class='candidate-img'><img src='../assets/candidates/{{candidate.n}}.jpg'></div>
+          </div>
+          <div class="col-md-2 col-sm-8">
+            <h1 class="highlight">{{candidate.nm}}</h1>
+            <p class='text-overflow' *ngIf="!loading" >Partido: {{candidate.cc}}</p>
+            <p *ngIf="!loading">Numero: {{candidate.n}}</p>
+          </div>
+          <div class="col-md-8 col-sm-12">
+            <h1 class="highlight text-right votes-candidate">{{getCandidateVotesPercent(candidate.v)}}%</h1>            
+            <div class="candidate-bar">
+            <small *ngIf="!loading" >Votos: {{candidate.v}}</small>
+              <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+              <mat-progress-bar *ngIf="!loading" mode="determinate" value="{{getCandidateVotesPercent(candidate.v)}}"></mat-progress-bar>
+            </div>
+          </div>
+        </div>
       </div>
     </mat-card>
   </div>
