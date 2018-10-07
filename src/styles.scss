@@ -1,13 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+//bg colors
+$bg-body: #F1F1F1; 
 
-html, body { height: 100%; }
+// card overview
+$bg-total: #1ABC9C;
+$bg-valid: #3498DB;
+$bg-invalid: #34495E;
+$bg-canceled: #E74C3C;
+
+// font Color
+$font-default: #414141;
+$font-white: #fff;
+
+
+html, body { height: 100%; background: $bg-body }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
 
 h1,h2,h3,p{
   margin: 0px;
-}
-/* wrapper */
-.wrapper{
-  margin: 0 auto;
-  max-width: 1156px;
+  font-weight: normal;
+  &.highlight{
+    font-weight: 500;
+  }
 }
