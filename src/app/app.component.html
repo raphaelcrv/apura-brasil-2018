@@ -1,7 +1,84 @@
-<header>
-  <div class="wrapper">
-    <h1>Apura Brasil</h1>
-    <h2>Acompanhe em tempo real as apurações</h2>
+<header class="nav-title">
+  <div class="container">
+    <h1 class="highlight">Apura Brasil</h1>
+    <h2 class="highlight">Acompanhe em tempo real as apurações</h2>
     <p>A fonte das informações desta página é o Tribunal Superior Eleitoral. Segundo esclarece o TSE, <br> o candidato que aparece com 0 (zero) voto pode não ter tido seus votos validados, <br> devido à situação jurídica ou à do seu partido </p>
   </div>
 </header>
+
+<section class="overview">
+  <div class="container">
+    <mat-card>
+      <div class="row">
+        <div class="col-md-3 col-sm-12 col-xm-12">
+          <mat-card class='total-votes'>
+            <div class="row">
+              <div class='col-sm-6 col-xm-6'>
+                <p>Total<br>Apurado</p>
+              </div>
+              <div class='col-sm-6 col-xm-6'>
+                <h1 class="highlight">20%</h1>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <mat-card class="valid-votes">
+            <div class="row">
+              <div class='col-sm-6 col-xm-6'>
+                <p>Votos<br>Válidos</p>
+              </div>
+              <div class='col-sm-6 col-xm-6'>
+                <h1 class="highlight">20%</h1>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <mat-card class="invalid-votes">
+            <div class="row">
+              <div class='col-sm-6 col-xm-6'>
+                <p>Votos<br>Invalidos</p>
+              </div>
+              <div class='col-sm-6 col-xm-6'>
+                <h1 class="highlight">20%</h1>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <mat-card class="canceled-votes">
+            <div class="row">
+              <div class='col-sm-6 col-xm-6'>
+                <p>Votos<br>Abstenido</p>
+              </div>
+              <div class='col-sm-6 col-xm-6'>
+                <h1 class="highlight">20%</h1>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</section>
+
+<section class="candidates">
+  <div class="container">
+    <mat-card>
+      <h1>Presidente</h1>
+      <p>Sessões apuradas</p>
+      <!-- candidates table -->
+      <div class='candidate-info' *ngFor="let candidate of candidates">
+        <div class='candidate-img'>img</div>
+        <p>{{candidate.nm}}</p>
+        <p>Partido</p>
+        <p>Numero</p>
+      </div>
+    </mat-card>
+  </div>
+</section>
+<br>
+<br><br>
+<br>
+
