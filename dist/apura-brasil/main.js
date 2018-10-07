@@ -251,15 +251,13 @@ var CandidateService = /** @class */ (function () {
     function CandidateService(http) {
         this.http = http;
     }
-    CandidateService_1 = CandidateService;
     CandidateService.prototype.get = function () {
-        return this.http.get(CandidateService_1.url).toPromise().then(function (res) { return res.json(); });
+        // return this.http.get(CandidateService.url).toPromise().then((res) => res.json());
         // uncomment for local and moc data
-        // return this.http.get('../../assets/data.json').toPromise().then((res) => res.json());
+        return this.http.get('../../assets/data.json').toPromise().then(function (res) { return res.json(); });
     };
-    var CandidateService_1;
     CandidateService.url = 'http://divulga.tse.jus.br/2018/divulgacao/oficial/295/dadosdivweb/br/br-c0001-e000295-w.js';
-    CandidateService = CandidateService_1 = __decorate([
+    CandidateService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' }),
         __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
     ], CandidateService);
