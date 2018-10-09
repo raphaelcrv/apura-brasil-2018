@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/raphaelcrv/apura-brasil-2018.svg?branch=master](https://travis-ci.com/raphaelcrv/apura-brasil-2018)
+[![Build Status](https://travis-ci.com/raphaelcrv/apura-brasil-2018.svg?branch=master)](https://travis-ci.com/raphaelcrv/apura-brasil-2018)
 # ApuraBrasil
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
