@@ -24,7 +24,6 @@ export class AppComponent {
   }
 
    refreshResults(){
-     return;
      this.reload = setInterval(() => {
        console.log('refreshResults');
        this.getCandidates();
@@ -63,7 +62,7 @@ export class AppComponent {
       console.log(response);
     }, (err) => {
       this.refreshResults();
-      console.log('err');
+      console.log('err', err);
     })
   }
 

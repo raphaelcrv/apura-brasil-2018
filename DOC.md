@@ -48,6 +48,8 @@ If you want to see what versions are installed:
 
 # Deploy Instricutions
 
+    git pull origin master
+
 Build application optimized for production
 
     cd /servers/apura-brasil-2018/
@@ -55,11 +57,11 @@ Build application optimized for production
 
 Delete all content inside the folder
 
-    sudo rm  /servers/apura-brasil-2018/
+    sudo rm -r ~/servers/apura-brasil-2018/*
 
 move application to server folder
 
-    sudo mv /projects/apura-brasil-2018/dist/apura-brasil/* /servers/apura-brasil-2018/
+    sudo mv ~/projects/apura-brasil-2018/dist/apura-brasil/* ~/servers/apura-brasil-2018/
 
 start webserver with http-server
 
