@@ -10,9 +10,9 @@ export class CandidateService {
   constructor(public http: Http) { }
 
   get(){
-    // return this.http.get(CandidateService.url).toPromise().then((res) => res.json());
+    return this.http.get(CandidateService.url).toPromise().then((res) => res.json());
     // uncomment for local and moc data
-    return this.http.get('../../assets/data.json').toPromise().then((res) => res.json());
+    // return this.http.get('../../assets/data.json').toPromise().then((res) => res.json());
   }
 
   getGlobo(){

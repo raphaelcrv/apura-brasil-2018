@@ -83,10 +83,10 @@ export class AppComponent {
   getOverviewPercent(total){
     let dataPercent;
     return dataPercent = {
-      totalCounted: ((parseInt(total.ea) * 100) / parseInt(total.e)).toFixed(0),
-      totalPending: ((parseInt(total.ena) * 100) / parseInt(total.e)).toFixed(0),
-      totalValid: ((parseInt(total.vv) * 100) / parseInt(total.e)).toFixed(0),
-      totalCanceled: (((parseInt(total.vb) + parseInt(total.vn) + parseInt(total.a))*100) / parseInt(total.e)).toFixed(0),
+      totalCounted: ((parseInt(total.vv) * 100) / parseInt(total.vv)).toFixed(0),
+      totalPending: ((parseInt(total.ena) * 100) / parseInt(total.vv)).toFixed(0),
+      totalValid: ((parseInt(total.vv) * 100) / parseInt(total.vv)).toFixed(0),
+      totalCanceled: (((parseInt(total.vb) + parseInt(total.vn) + parseInt(total.a))*100) / parseInt(total.vv)).toFixed(0),
     }
   }
 
@@ -97,8 +97,8 @@ export class AppComponent {
   }
 
   getCandidateVotesPercent(votes){
-    let e = this.overview.e;
-    return ((parseInt(votes) * 100) / parseInt(e)).toFixed(0);
+    let vv = this.overview.vv;
+    return ((parseInt(votes) * 100) / parseInt(vv)).toFixed(0);
   } 
 
 
