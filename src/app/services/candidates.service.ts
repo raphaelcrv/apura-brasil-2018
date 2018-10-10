@@ -16,7 +16,8 @@ export class CandidateService {
   }
 
   getGlobo(){
-    return this.http.get('http://s.glbimg.com/jo/el/2018/apuracao/1-turno/br/executivo.json').toPromise().then((res) => res.json());
+    return this.http.get('http://apurabrasil.com.br:3000/executivo.json').toPromise().then((res) => res.json());
+    // return this.http.get('http://s.glbimg.com/jo/el/2018/apuracao/1-turno/br/executivo.json').toPromise().then((res) => res.json());
   }
 
   

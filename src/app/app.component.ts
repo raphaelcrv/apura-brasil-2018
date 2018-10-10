@@ -27,7 +27,7 @@ export class AppComponent {
      this.reload = setInterval(() => {
        console.log('refreshResults');
        this.getCandidates();
-     }, 5000);
+     }, 15000);
    }
 
 // todo display count refresh on screen
