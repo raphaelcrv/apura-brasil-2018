@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.com/raphaelcrv/apura-brasil-2018.svg?branch=master)](https://travis-ci.com/raphaelcrv/apura-brasil-2018)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 # ApuraBrasil
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
@@ -23,9 +25,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+
+
+
+# Working on your first Pull Request? 
+You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
+
+# Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
-teste.
