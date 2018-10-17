@@ -66,15 +66,13 @@ move application to server folder
 start webserver with http-server
 > which http-server (returns the path from binary)
 
-    pm2 start /usr/bin/http-server -- -p 8080 -d false
+    pm2 start /usr/bin/http-server -- -p 80 -d false
+    
+    pm2 start /usr/bin/http-server --name chat-web -- -p 8080 -d false
 
 start nodemon server
 
-    sudo pm2 start /home/ubuntu/.nvm/versions/node/v8.12.0/bin/nodemon app.js
-
-# Ci configuration
-[Abstruse](https://github.com/bleenco/abstruse)
-
+    sudo pm2 start /home/ubuntu/.nvm/versions/node/v8.12.0/bin/nodemon app.js --name chat-server
 [Andular Deployment](https://angular.io/guide/deployment)
 
 ci teste
