@@ -41,3 +41,28 @@ h1{
 ::ng-deep .mat-progress-bar-buffer {
     background: #E4E8EB;
 }
+
+// default sections
+section{
+  margin-bottom: 25px;
+  &.candidates, &.overview{
+    .container{
+      >.mat-card{
+        padding: 40px !important;
+      }
+      .mat-card{
+        h1{
+          font-size: 48px;
+          text-align: left;
+          &.highlight{
+          font-weight: 500;
+          }
+          span{
+            float: right;
+          }
+        }
+
+      }
+    }
+  }
+}

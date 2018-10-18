@@ -28,66 +28,6 @@ header {
   }
 }
 
-// default sections
-section{
-  margin-bottom: 25px;
-  &.candidates, &.overview{
-    .container{
-      >.mat-card{
-        padding: 40px !important;
-      }
-      .mat-card{
-        h1{
-          font-size: 48px;
-          text-align: left;
-          &.highlight{
-          font-weight: 500;
-          }
-          span{
-            float: right;
-          }
-        }
-
-      }
-    }
-  }
-}
-
-// overview
-section{
-  &.overview{
-    margin-top: -70px;
-    .container{
-      .mat-card{
-        padding: 15px;
-        h1{
-          font-size: 28px;
-          text-align: right;
-          color: $font-white;
-        }
-        p{
-          color: $font-white;
-          font-size: 15px;
-          text-align: center;
-        }
-        
-        .total-votes{
-          background-color: $bg-counted;          
-        }
-        .pending-votes{
-          background-color: $bg-pending;
-        }
-        .valid-votes{
-          background-color: $bg-valid;
-        }
-        .invalid-votes{
-          background-color: $bg-invalid;
-        }
-      }
-    }
-  }
-}
-
 // candidates
 section{
   &.candidates{
