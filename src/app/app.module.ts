@@ -11,14 +11,19 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
-import { OverviewVotesComponent } from './components/overview-votes/overview-votes.component';
+import { CandidatesComponent } from './components/candidates/candidates.component';
+import { OverviewVotesComponent } from './components/candidates/overview-votes/overview-votes.component';
+import { CandidatesListComponent } from './components/candidates/candidates-list/candidates-list.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    OverviewVotesComponent
+    OverviewVotesComponent,
+    CandidatesListComponent,
+    CandidatesComponent
   ],
   imports: [
     BrowserModule,

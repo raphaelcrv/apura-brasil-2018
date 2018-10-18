@@ -1,0 +1,70 @@
+@import '../../../../styles.scss';
+
+// candidates
+section{
+  &.candidates{
+    .container{
+      .mat-card{
+        .candidate-info{
+          padding: 10px;
+          margin: 20px 0;
+          border: 1px solid #f1f1f1;
+          h1{
+            font-size: 18px;
+            &.highlight{
+              font-weight: 500px;
+            }
+          }
+          p{
+            font-size: 15px;
+          }
+          .text-overflow{
+            display: inline-block;
+            width: 107px;
+            white-space: nowrap;
+            overflow: hidden !important;
+            text-overflow: ellipsis;
+          }
+          .candidate-img{
+            img{
+              width: 100px;
+              border-radius: 50%;
+            }
+          }
+          .votes-candidate{
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  section{
+    &.candidates{
+      .container{
+        .mat-card{
+          .candidate-info{
+            padding: 25px;
+            h1{
+              font-size: 15px;
+              &.highlight{
+                font-weight: 500px;
+              }
+            }
+            p{
+              font-size: 13px;
+            }
+            .candidate-img{
+              img{
+                width: 90px;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@import '../../../../styles.scss';
 
 // overview
 section{
@@ -29,6 +29,25 @@ section{
         }
         .invalid-votes{
           background-color: $bg-invalid;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  section{
+    &.overview{
+      margin-top: -70px;
+      .container{
+        .mat-card{
+          margin-bottom: 12px;
+          .fix-card-margin{
+            margin-bottom: 5px;
+          }
+          h1{
+            text-align: center !important;
+          }
         }
       }
     }

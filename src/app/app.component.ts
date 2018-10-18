@@ -21,6 +21,13 @@ export class AppComponent {
 
   title = 'apura-brasil';
 
+  OverviewData = {
+    name: 'xuxa',
+    age: '12',
+    street: 'TimeSquare',
+    city: 'Disney'
+  }
+
   ngOnInit() {
     this.getCandidatesFirstRound();
     this.getCandidatesSecondRound();
