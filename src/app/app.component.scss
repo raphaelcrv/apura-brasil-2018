@@ -1,7 +1,7 @@
 @import '../styles.scss';
 
 header {
-  background: url('src/assets/bg-header.jpg') no-repeat center center fixed;
+  background: url('../assets/bg-header.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -125,14 +125,6 @@ section{
         }
       }
     }
-  }
-}
-
-footer{
-  margin: 45px 0 15px 0px;
-  p{
-    text-align: center;
-    font-size: 13px;
   }
 }
 
