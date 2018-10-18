@@ -10,15 +10,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
-import { FirstRoundComponent } from './first-round/first-round.component';
-import { SecondRoundComponent } from './second-round/second-round.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstRoundComponent,
-    SecondRoundComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
