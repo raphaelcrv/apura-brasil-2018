@@ -1,0 +1,64 @@
+<section class="overview">
+  <div class="container">
+    <mat-card>
+      <div class="row">
+        <div class="col-md-3 col-sm-12 col-xm-12">
+          <mat-card class='total-votes'>
+            <div class="row">
+              <div class='col-sm-6 col-xm-6'>
+                <p>Votos<br>contabilizados</p>
+              </div>
+              <div class='col-sm-6 col-xm-6'>
+                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
+                <!--                                        Votos Contabilizados -->
+                <h1 *ngIf="!loading" class="highlight">2%</h1>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <mat-card class="pending-votes">
+            <div class="row">
+              <div class='col-sm-6 col-xm-6'>
+                <p>Votos<br>Restantes</p>
+              </div>
+              <div class='col-sm-6 col-xm-6'>
+                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
+                <!--                                          Votos pendentes -->
+                <h1 *ngIf="!loading" class="highlight">21%</h1>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <mat-card class="valid-votes">
+            <div class="row">
+              <div class='col-sm-6 col-xm-6'>
+                <p>Votos<br>Validos</p>
+              </div>
+              <div class='col-sm-6 col-xm-6'>
+                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
+                <!--                                          Votos Validos -->
+                <h1 *ngIf="!loading" class="highlight">33%</h1>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <mat-card class="invalid-votes">
+            <div class="row">
+              <div class='col-sm-6 col-xm-6'>
+                <p>Votos<br>Invalidos</p>
+              </div>
+              <div class='col-sm-6 col-xm-6'>
+                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
+                <!--                                         Votos invalidos -->
+                <h1 *ngIf="!loading" class="highlight">45%</h1>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</section>
