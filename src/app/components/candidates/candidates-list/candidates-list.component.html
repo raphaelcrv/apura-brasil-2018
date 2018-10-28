@@ -1,22 +1,19 @@
 <section class="candidates">
   <div class="container">
     <mat-card>
-      <button mat-stroked-button color="primary" (click)='getCandidatesGlobo()'>Atualizar</button>
-      <span *ngIf="loading"><br>Atualizando...</span>
+      <!-- <button mat-stroked-button color="primary" (click)='getCandidatesGlobo()'>Atualizar</button> -->
+      
+      <mat-spinner style="display: inline-block" [diameter]=20></mat-spinner>
+      <p style="display: inline; ">&nbsp;&nbsp; Atualizando em .. 3 </p>
       <h1 class="highlight">
         Presidente
-        <span *ngIf="!loading">98%</span>
-        <span *ngIf="loading">
-          <mat-spinner [diameter]=20 *ngIf="loading"></mat-spinner>
-        </span>
+        <span>98%</span>
       </h1>
-      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
-      <mat-progress-bar *ngIf="!loading" mode="determinate" value=""></mat-progress-bar>
+      <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+      <mat-progress-bar *ngIf="!isLoading" mode="determinate" value=""></mat-progress-bar>
       <p>
-        <!-- loading -->
-        <mat-spinner [diameter]=20 *ngIf="loading"></mat-spinner>
         <!-- votesCounted -->
-        <span *ngIf="!loading">
+        <span>
           Votos contabilizados: 125555
         </span>
       </p>
@@ -29,15 +26,15 @@
           </div>
           <div class="col-md-2 col-sm-8">
             <h1 class="highlight"></h1>
-            <p class='text-overflow' *ngIf="!loading">Partido: xpto </p>
-            <p *ngIf="!loading">Numero: 17</p>
+            <p class='text-overflow'>Partido: xpto </p>
+            <p>Numero: 17</p>
           </div>
           <div class="col-md-8 col-sm-12">
-            <h1 class="highlight text-right votes-candidate">90 %</h1>
+            <h1 class="highlight text-right votes-candidate">98%</h1>
             <div class="candidate-bar">
-              <small *ngIf="!loading">Votos: 1200 </small>
-              <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
-              <mat-progress-bar *ngIf="!loading" mode="determinate" value=""></mat-progress-bar>
+              <small>Votos: 1200 </small>
+              <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+              <mat-progress-bar *ngIf="!isLoading" mode="determinate" value=""></mat-progress-bar>
             </div>
           </div>
         </div>

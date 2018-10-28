@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CandidateService } from '../app/services/candidates.service';
+import { ApurationService } from '../app/services/apuration.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +17,7 @@ export class AppComponent {
 
   reload: any;
 
-  constructor(private candidateService : CandidateService) { }
+  constructor(private ApurationService : ApurationService) { }
 
   title = 'apura-brasil';
 
