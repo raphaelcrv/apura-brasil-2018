@@ -4,37 +4,39 @@
       <!-- <button mat-stroked-button color="primary" (click)='getCandidatesGlobo()'>Atualizar</button> -->
       
       <mat-spinner style="display: inline-block" [diameter]=20></mat-spinner>
-      <p style="display: inline; ">&nbsp;&nbsp; Atualizando em .. 3 </p>
+      <p style="display: inline; ">&nbsp;&nbsp; Atualizando em .. 10s </p>
       <h1 class="highlight">
         Presidente
-        <span>98%</span>
+        <span>{{apuration.abrangencia.andamento}}%</span>
       </h1>
       <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
       <mat-progress-bar *ngIf="!isLoading" mode="determinate" value=""></mat-progress-bar>
       <p>
         <!-- votesCounted -->
         <span>
-          Votos contabilizados: 125555
+          seções apuradas: {{apuration.abrangencia.secoesTotalizadas}}
         </span>
       </p>
       <h2>Candidatos:</h2>
       <!-- candidates table -->
-      <div class='candidate-info'>
+      <div class='candidate-info' *ngFor="let candidato of candidates">
         <div class="row">
           <div class="col-md-2 col-sm-4">
-            <div class='candidate-img'><img src='../assets/candidates/17.jpg'></div>
+            <div class='candidate-img'><img src='{{candidato.foto}}'></div>
           </div>
-          <div class="col-md-2 col-sm-8">
+          <div class="col-md-3 col-sm-8">
             <h1 class="highlight"></h1>
-            <p class='text-overflow'>Partido: xpto </p>
-            <p>Numero: 17</p>
+            <p><b>Nome:</b> {{candidato.nome}}</p>
+            <p class='text-overflow'><b>Partido:</b> {{candidato.coligacao}} </p>
+            <p><b>Numero:</b> {{candidato.numero}}</p>
           </div>
-          <div class="col-md-8 col-sm-12">
-            <h1 class="highlight text-right votes-candidate">98%</h1>
+          <div class="col-md-7 col-sm-12">
+            <div *ngIf="candidato.eleito != 'N'"><p style="text-align:right">Eleito (2º turno)</p></div>
+            <h1 class="highlight text-right votes-candidate">{{candidato.votos.porcentagem}}%</h1>
             <div class="candidate-bar">
-              <small>Votos: 1200 </small>
+              <small> {{candidato.votos.quantidade}} Votos </small>
               <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
-              <mat-progress-bar *ngIf="!isLoading" mode="determinate" value=""></mat-progress-bar>
+              <mat-progress-bar *ngIf="!isLoading" mode="determinate" value="{{candidato.votos.porcentagem}}"></mat-progress-bar>
             </div>
           </div>
         </div>
