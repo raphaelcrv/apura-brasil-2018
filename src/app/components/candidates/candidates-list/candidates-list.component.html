@@ -2,52 +2,52 @@
   <div class="container">
     <mat-card>
       <div class="row">
-        <div class="col-md-3 col-sm-12 col-xm-12">
+        <div class="col-md-3 col-sm-12 small-padding">
           <mat-card class='total-votes'>
             <div class="row">
-              <div class='col-sm-6 col-xm-6'>
+              <div class='col-sm-6 col-xm-6 no-padding'>
                 <p>Votos<br>Validos</p>
               </div>
-              <div class='col-sm-6 col-xm-6'>
+              <div class='col-sm-6 col-xm-6 no-padding'>
                 <!--                                        Votos Contabilizados -->
                 <h1 class="highlight">{{apuration.abrangencia.votos.validos.porcentagem}}%</h1>
               </div>
             </div>
           </mat-card>
         </div>
-        <div class="col-md-3 col-sm-12">
+        <div class="col-md-3 col-sm-12 small-padding">
           <mat-card class="pending-votes">
             <div class="row">
-              <div class='col-sm-6 col-xm-6'>
+              <div class='col-sm-6 col-xm-6 no-padding'>
                 <p>Votos<br>Brancos</p>
               </div>
-              <div class='col-sm-6 col-xm-6'>
+              <div class='col-sm-6 col-xm-6 no-padding'>
                 <!--                                          Votos pendentes -->
                 <h1 class="highlight">{{apuration.abrangencia.votos.brancos.porcentagem}}%</h1>
               </div>
             </div>
           </mat-card>
         </div>
-        <div class="col-md-3 col-sm-12">
+        <div class="col-md-3 col-sm-12 small-padding">
           <mat-card class="valid-votes">
             <div class="row">
-              <div class='col-sm-6 col-xm-6'>
+              <div class='col-sm-6 col-xm-6 no-padding'>
                 <p>Votos<br>Nulos</p>
               </div>
-              <div class='col-sm-6 col-xm-6'>
+              <div class='col-sm-6 col-xm-6 no-padding'>
                 <!--                                          Votos Validos -->
                 <h1 class="highlight">{{apuration.abrangencia.votos.nulos.porcentagem}}%</h1>
               </div>
             </div>
           </mat-card>
         </div>
-        <div class="col-md-3 col-sm-12">
+        <div class="col-md-3 col-sm-12 small-padding">
           <mat-card class="invalid-votes">
             <div class="row">
-              <div class='col-sm-6 col-xm-6'>
+              <div class='col-sm-6 col-xm-6 no-padding'>
                 <p>Votos<br>Abstenidos</p>
               </div>
-              <div class='col-sm-6 col-xm-6'>
+              <div class='col-sm-6 col-xm-6 no-padding'>
                 <!--                                         Votos invalidos -->
                 <h1 class="highlight">{{apuration.abrangencia.votos.abstencao.porcentagem}}%</h1>
               </div>
@@ -66,6 +66,12 @@
       
       <mat-spinner style="display: inline-block" [diameter]=20></mat-spinner>
       <p style="display: inline; ">&nbsp;&nbsp; Atualizando em .. 10s </p>
+            <!-- info apuration alert -->
+            <div class="info-apuration">
+              <h2>Aguarde</h2>
+              <p>O TSE já está contando votos, mas só divulgará os resultados após as 19h (Brasília), quando termina a votação no
+                Acre.</p>
+            </div>
       <h1 class="highlight">
         Presidente
         <span>{{apuration.abrangencia.andamento}}%</span>
@@ -78,6 +84,7 @@
           seções apuradas: {{apuration.abrangencia.secoesTotalizadas}}
         </span>
       </p>
+      <!-- candidates list -->
       <h2>Candidatos:</h2>
 
       <!-- candidates table -->

@@ -28,9 +28,7 @@
               },
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/nosleep.js/src/index.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
