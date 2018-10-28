@@ -12,14 +12,15 @@
       </h1>
       <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
       <mat-progress-bar *ngIf="!loading" mode="determinate" value=""></mat-progress-bar>
-      <p>Votos contabilizados: 125555
+      <p>
         <!-- loading -->
         <mat-spinner [diameter]=20 *ngIf="loading"></mat-spinner>
         <!-- votesCounted -->
         <span *ngIf="!loading">
-
+          Votos contabilizados: 125555
         </span>
       </p>
+      <h2>Candidatos:</h2>
       <!-- candidates table -->
       <div class='candidate-info'>
         <div class="row">

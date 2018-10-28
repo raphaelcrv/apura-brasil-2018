@@ -9,10 +9,10 @@ header {
   height: 420px;
   background-position: 0px -150px;
   &.nav-title{
-    padding: 110px 0 0 0;
+    padding: 95px 0 0 0;
   }
   // colors style
-  h1,h2,p{
+  h1,h2,h4,p{
     color: #fff;
     text-align: center;
   }
@@ -23,8 +23,14 @@ header {
   h2{
     font-size: 38px;
   }
+  h4{
+    font-size: 22px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
   p{
-    font-size: 18px;
+    font-size: 11px;
   }
 }
 

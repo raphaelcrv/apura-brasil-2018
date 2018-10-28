@@ -5,6 +5,9 @@ section{
   &.candidates{
     .container{
       .mat-card{
+        h2{
+          margin: 33px 0 0;
+        }
         .candidate-info{
           padding: 10px;
           margin: 20px 0;
