@@ -1,0 +1,128 @@
+@import '../../../../styles.scss';
+
+// candidates
+section{
+  &.candidates{
+    .container{
+      .mat-card{
+        h2{
+          margin: 33px 0 0;
+        }
+        .candidate-info{
+          padding: 10px;
+          margin: 20px 0;
+          border: 1px solid #f1f1f1;
+          h1{
+            font-size: 18px;
+            &.highlight{
+              font-weight: 500px;
+            }
+          }
+          p{
+            font-size: 15px;
+          }
+          .text-overflow{
+            display: inline-block;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden !important;
+            text-overflow: ellipsis;
+          }
+          .candidate-img{
+            img{
+              width: 100px;
+              border-radius: 50%;
+            }
+          }
+          .votes-candidate{
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  section{
+    &.candidates{
+      .container{
+        .mat-card{
+          .candidate-info{
+            padding: 25px;
+            h1{
+              font-size: 15px;
+              &.highlight{
+                font-weight: 500px;
+              }
+            }
+            p{
+              font-size: 13px;
+            }
+            .candidate-img{
+              img{
+                width: 90px;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// overview
+section{
+  &.overview{
+    margin-top: -70px;
+    .container{
+      .mat-card{
+        padding: 15px;
+        h1{
+          font-size: 28px;
+          text-align: right;
+          color: $font-white;
+        }
+        p{
+          color: $font-white;
+          font-size: 15px;
+          text-align: center;
+        }
+        
+        .total-votes{
+          background-color: $bg-counted;          
+        }
+        .pending-votes{
+          background-color: $bg-pending;
+        }
+        .valid-votes{
+          background-color: $bg-valid;
+        }
+        .invalid-votes{
+          background-color: $bg-invalid;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  section{
+    &.overview{
+      margin-top: -70px;
+      .container{
+        .mat-card{
+          margin-bottom: 12px;
+          .fix-card-margin{
+            margin-bottom: 5px;
+          }
+          h1{
+            text-align: center !important;
+            font-size: 23px;
+          }
+        }
+      }
+    }
+  }
+}

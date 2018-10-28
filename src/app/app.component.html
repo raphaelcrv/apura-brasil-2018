@@ -1,125 +1,12 @@
 <header class="nav-title">
   <div class="container">
     <h1 class="highlight">Apura Brasil</h1>
+    <h4>(2º Turno)</h4>
     <h2 class="highlight">Acompanhe em tempo real as apurações</h2>
     <p>A fonte das informações desta página é o Tribunal Superior Eleitoral. Segundo esclarece o TSE, <br> o candidato que aparece com 0 (zero) voto pode não ter tido seus votos validados, <br> devido à situação jurídica ou à do seu partido </p>
   </div>
 </header>
 
-<section class="overview">
-  <div class="container">
-    <mat-card>
-      <div class="row">
-        <div class="col-md-3 col-sm-12 col-xm-12">
-          <mat-card class='total-votes'>
-            <div class="row">
-              <div class='col-sm-6 col-xm-6'>
-                <p>Votos<br>contabilizados</p>
-              </div>
-              <div class='col-sm-6 col-xm-6'>
-                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
-                <h1 *ngIf="!loading" class="highlight">{{overviewPercent.totalCounted}}%</h1>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <mat-card class="pending-votes">
-            <div class="row">
-              <div class='col-sm-6 col-xm-6'>
-                <p>Votos<br>Restantes</p>
-              </div>
-              <div class='col-sm-6 col-xm-6'>
-                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
-                <h1 *ngIf="!loading" class="highlight">{{overviewPercent.totalPending}}%</h1>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <mat-card class="valid-votes">
-            <div class="row">
-              <div class='col-sm-6 col-xm-6'>
-                <p>Votos<br>Validos</p>
-              </div>
-              <div class='col-sm-6 col-xm-6'>
-                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
-                <h1 *ngIf="!loading" class="highlight">{{overviewPercent.totalValid}}%</h1>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <mat-card class="invalid-votes">
-            <div class="row">
-              <div class='col-sm-6 col-xm-6'>
-                <p>Votos<br>Invalidos</p>
-              </div>
-              <div class='col-sm-6 col-xm-6'>
-                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
-                <h1 *ngIf="!loading" class="highlight">{{overviewPercent.totalCanceled}}%</h1>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-      </div>
-    </mat-card>
-  </div>
-</section>
+<app-candidates></app-candidates>
 
-<section class="candidates">
-  <div class="container">
-    <mat-card>
-      <button mat-stroked-button color="primary" (click)='getCandidatesGlobo()'>Atualizar</button>
-      <span *ngIf="loading"><br>Atualizando...</span>
-      <h1 class="highlight">
-        Presidente
-        <span *ngIf="!loading">{{overviewPercent.totalCounted}}%</span>
-          <span *ngIf="loading">
-           <mat-spinner [diameter]=20 *ngIf="loading"></mat-spinner>
-          </span>
-      </h1>
-      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
-      <mat-progress-bar *ngIf="!loading" mode="determinate" value="{{overviewPercent.totalCounted}}"></mat-progress-bar>
-      <p>Votos contabilizados: 
-          <!-- loading -->
-        <mat-spinner [diameter]=20  *ngIf="loading"></mat-spinner>
-        <!-- votesCounted -->
-        <span *ngIf="!loading">
-          {{overview.ea | number}}
-        </span> 
-      </p>
-      <!-- candidates table -->
-      <div class='candidate-info' *ngFor="let candidate of candidates">
-        <div class="row">
-          <div class="col-md-2 col-sm-4">
-            <div class='candidate-img'><img src='../assets/candidates/{{candidate.n}}.jpg'></div>
-          </div>
-          <div class="col-md-2 col-sm-8">
-            <h1 class="highlight">{{candidate.nm}}</h1>
-            <p class='text-overflow' *ngIf="!loading" >Partido: {{candidate.cc}}</p>
-            <p *ngIf="!loading">Numero: {{candidate.n}}</p>
-          </div>
-          <div class="col-md-8 col-sm-12">
-            <h1 class="highlight text-right votes-candidate">{{getCandidateVotesPercent(candidate.v)}}%</h1>            
-            <div class="candidate-bar">
-            <small *ngIf="!loading" >Votos: {{candidate.v}}</small>
-              <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
-              <mat-progress-bar *ngIf="!loading" mode="determinate" value="{{getCandidateVotesPercent(candidate.v)}}"></mat-progress-bar>
-            </div>
-          </div>
-        </div>
-      </div>
-    </mat-card>
-  </div>
-</section>
-
-<footer>
-  <div class="row">
-    <img src=''>
-    <img>
-  </div>
-  <p>Esse projeto foi desenvolvido em 24 horas em uma live no <a href="https://www.twitch.tv/videos/319374401">twitch</a> e o código font esta disponivel no <a href="https://github.com/raphaelcrv/apura-brasil-2018">github</a> <br> acompanhe as novidades e siga-me no <a href="twitter.com/raphaelcrv">twitter</a></p>
-  <p>Copyright © 2018 RSDigital</p>
-</footer>
-
+<app-footer></app-footer>

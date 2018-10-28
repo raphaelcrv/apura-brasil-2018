@@ -10,11 +10,18 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
+import { FooterComponent } from './components/footer/footer.component';
+import { CandidatesComponent } from './components/candidates/candidates.component';
+import { CandidatesListComponent } from './components/candidates/candidates-list/candidates-list.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    CandidatesListComponent,
+    CandidatesComponent
   ],
   imports: [
     BrowserModule,
