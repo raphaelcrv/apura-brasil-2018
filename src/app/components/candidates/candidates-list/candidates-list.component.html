@@ -9,9 +9,8 @@
                 <p>Votos<br>Validos</p>
               </div>
               <div class='col-sm-6 col-xm-6'>
-                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
                 <!--                                        Votos Contabilizados -->
-                <h1 *ngIf="!loading" class="highlight">{{apuration.abrangencia.votos.validos.porcentagem}}%</h1>
+                <h1 class="highlight">{{apuration.abrangencia.votos.validos.porcentagem}}%</h1>
               </div>
             </div>
           </mat-card>
@@ -23,9 +22,8 @@
                 <p>Votos<br>Brancos</p>
               </div>
               <div class='col-sm-6 col-xm-6'>
-                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
                 <!--                                          Votos pendentes -->
-                <h1 *ngIf="!loading" class="highlight">{{apuration.abrangencia.votos.brancos.porcentagem}}%</h1>
+                <h1 class="highlight">{{apuration.abrangencia.votos.brancos.porcentagem}}%</h1>
               </div>
             </div>
           </mat-card>
@@ -37,9 +35,8 @@
                 <p>Votos<br>Nulos</p>
               </div>
               <div class='col-sm-6 col-xm-6'>
-                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
                 <!--                                          Votos Validos -->
-                <h1 *ngIf="!loading" class="highlight">{{apuration.abrangencia.votos.nulos.porcentagem}}%</h1>
+                <h1 class="highlight">{{apuration.abrangencia.votos.nulos.porcentagem}}%</h1>
               </div>
             </div>
           </mat-card>
@@ -51,9 +48,8 @@
                 <p>Votos<br>Abstenidos</p>
               </div>
               <div class='col-sm-6 col-xm-6'>
-                <mat-spinner [diameter]=40 *ngIf="loading"></mat-spinner>
                 <!--                                         Votos invalidos -->
-                <h1 *ngIf="!loading" class="highlight">{{apuration.abrangencia.votos.abstencao.porcentagem}}%</h1>
+                <h1 class="highlight">{{apuration.abrangencia.votos.abstencao.porcentagem}}%</h1>
               </div>
             </div>
           </mat-card>
