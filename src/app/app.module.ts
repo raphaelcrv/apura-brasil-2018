@@ -12,7 +12,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { CandidatesComponent } from './components/candidates/candidates.component';
-import { OverviewVotesComponent } from './components/candidates/overview-votes/overview-votes.component';
 import { CandidatesListComponent } from './components/candidates/candidates-list/candidates-list.component';
 
 
@@ -21,7 +20,6 @@ import { CandidatesListComponent } from './components/candidates/candidates-list
   declarations: [
     AppComponent,
     FooterComponent,
-    OverviewVotesComponent,
     CandidatesListComponent,
     CandidatesComponent
   ],
