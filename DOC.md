@@ -63,6 +63,8 @@ move application to server folder
 
     sudo mv ~/projects/apura-brasil-2018/dist/apura-brasil/* ~/servers/apura-brasil-2018/
 
+# PM2 instructions
+
 start webserver with http-server
 > which http-server (returns the path from binary)
 
@@ -73,6 +75,3 @@ start webserver with http-server
 start nodemon server
 
     sudo pm2 start /home/ubuntu/.nvm/versions/node/v8.12.0/bin/nodemon app.js --name chat-server
-[Andular Deployment](https://angular.io/guide/deployment)
-
-ci teste
