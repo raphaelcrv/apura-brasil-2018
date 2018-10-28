@@ -138,8 +138,8 @@ export class CandidatesListComponent implements OnInit {
 
   refreshResults() {
     this.reload = setInterval(() => {
-      // this.getCandidatesFirstRound();
-    }, 15000);
+      this.getCandidatesFirstRound();
+    }, 10000);
   }
 
   // return all data from first round ellection
@@ -153,6 +153,7 @@ export class CandidatesListComponent implements OnInit {
       this.isLoading = false;
       this.refreshResults();
     }, (err) => {
+      console.log(err);
       this.isLoading = false;
       this.refreshResults();
     })
