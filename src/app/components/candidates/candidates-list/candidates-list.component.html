@@ -100,8 +100,8 @@
             <p><b>Número:</b> {{candidato.numero}}</p>
           </div>
           <div class="col-md-7 col-sm-12">
-            <div *ngIf="candidato.eleito != 'N'"><p style="text-align:right">Eleito (2º turno)</p></div>
-            <div *ngIf="candidato.eleito != 'N'" class='winner'>
+            <div *ngIf="candidato.matEleito != 'N'"><p style="text-align:right">Eleito (2º turno)</p></div>
+            <div *ngIf="candidato.matEleito != 'N'" class='winner'>
               <img style="width: 100%; margin:0 auto;" src='../../../../assets/b17.jpg' />
             </div>
             <h1 class="highlight text-right votes-candidate">{{candidato.votos.porcentagem}}%</h1>
